@@ -1,0 +1,167 @@
+/* Reset default margin and padding for the body and ul */
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: "montserrat", roboto;
+}
+
+header {
+  width: 100%;
+  height: 100%;
+  background: #faf9f6;
+  position: absolute;
+  overflow-x: hidden;
+
+}
+
+.hamburger-icon {
+  position: fixed;
+  width: 15vw; /* Adjust as needed */
+  height: 20vw; /* Adjust as needed */
+  top: 5vh;
+  right: 0vw;
+  background-color: #ff0000;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+  clip-path: polygon(100% 0%, 0% 50%, 100% 100%);
+  transition: all 0.2s ease-in-out;
+}
+
+.icon-1,
+.icon-2,
+.icon-3 {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  width: 5vw;
+  min-width: 32px;
+  height: 0.5vw;
+  max-height: 4px;
+  min-height: 3px;
+  background-color: black;
+  cursor: pointer;
+  transition: all 400ms cubic-bezier(0.84, 0.06, 0.52, 1.8);
+}
+
+.icon-1 {
+  transform: translate(-50%, -50%) translateY(clamp(-18px, -1.25vh, -8px)); /* Center, rotate, and translate on y-axis */
+  animation-delay: 100ms;
+}
+
+.icon-3 {
+  transform: translate(-50%, -50%) translateY(clamp(8px, 1.25vh, 18px)); /* Center, rotate, and translate on y-axis */
+  animation-delay: 250ms;
+}
+
+
+
+
+.icon-1.a {
+  transform: translate(-50%, -50%) rotate(45deg); /* Center and rotate the icon */
+}
+
+.icon-3.b {
+  transform: translate(-50%, -50%) rotate(-45deg); /* Center and rotate the icon */
+}
+
+.icon-2.c {
+  opacity: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+@keyframes slideIn {
+  0% {
+    width: 0%;
+    opacity: 0;
+  }
+  100% {
+    width: 50%;
+    opacity: 1;
+  }
+}
+nav {
+  background: #ff0000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  z-index: 10;
+  opacity: 0;
+  transition: all 600ms cubic-bezier(0.62, 0.04, 0.3, 1.56);
+  transition-delay: 100ms;
+}
+
+nav ul {
+  margin: 0;
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Center adjustment */
+}
+
+nav ul li {
+  list-style: none;
+  font-size: 24px;
+  color: #fff;
+  line-height: 2.2;
+  text-transform: uppercase;
+  letter-spacing: 1.7px;
+}
+
+nav.show {
+  width: 50%;
+  opacity: 1;
+}
+
+.dark-red {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #8b0000;
+  height: 100%;
+  width: 0%;
+  transition: all 500ms cubic-bezier(0.62, 0.04, 0.3, 1.8);
+  transition-delay: 50ms;
+  z-index: 5;
+  opacity: 1;
+}
+
+.dark-red.slide {
+  width: 50%;
+  opacity: 1;
+}
+
+@keyframes shotup {
+  0% {
+    transform: translateY(300%);
+    opacity: 0;
+  }
+  90% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.content h1 {
+  font-size: 70px;
+  animation: shotup 600ms ease-in-out;
+  animation-delay: 300ms;
+}
