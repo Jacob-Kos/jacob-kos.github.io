@@ -123,7 +123,7 @@ nav ul li {
   letter-spacing: 1.7px;
 }
 
-a:link {
+a {
   color: #fff; 
   background-color: transparent; 
   text-decoration: none;
