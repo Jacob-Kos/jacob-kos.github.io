@@ -15,3 +15,21 @@ window.addEventListener("DOMContentLoaded", function () {
     });
   });
   
+  function showContent() {
+    resetbackground();
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("myDiv").style.display = "block";
+  }
+
+  function setloadbackground() {
+    document.body.style.backgroundColor = "#828282"; // New background color
+  }
+
+  function resetbackground() {
+    document.body.style.backgroundColor = "#FFFFFF"; // New background color
+  }
+  // Call the showContent function when the page and its resources are fully loaded
+  window.addEventListener("load", function() {
+    setloadbackground();
+    setTimeout(showContent, 200);
+  });
