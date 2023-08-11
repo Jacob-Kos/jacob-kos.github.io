@@ -1,0 +1,34 @@
+/* loadscreen.css */
+#loader {
+    --size: clamp(20px, 20vw, 220px);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: var(--size);
+    height: var(--size);
+    margin: calc(-1 * var(--size) / 2) 0 0 calc(-1 * var(--size) / 2);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 4vw rgba(0, 0, 0, 0.5);
+    animation: spin 2s linear infinite;
+}
+
+.inner-square {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
+    background-color: red;
+    
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); } /* Rotate the square */
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); } /* Rotate the square */
+    100% { transform: rotate(360deg); }
+}

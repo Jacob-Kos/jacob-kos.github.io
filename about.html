@@ -2,10 +2,12 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0  viewport-fit=cover">
+<link rel="stylesheet" href="loadscreen.css">
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" type="image/x-icon" href="images/Icon.ico">
 <script src="script.js"></script>
 </head>
+<body>
 <header>
   <title>Bansky - About</title>
   <div class="hamburger-icon" id="icon" aria-label="Toggle Menu">
@@ -25,8 +27,12 @@
     
     <div class="dark-red" id="red"></div>
   </header>
-
-  <body>
+  <div id="loader">
+    <div class="loader-icon"></div>
+    <div class="inner-square"></div>
+  </div>
+  
+<div style="display: none;" id="myDiv" class="animate-bottom">
     <section class="aboutcontent">
         <h2>History of Bansky</h2>
         <p>This satirical abstract work does not aim to please all viewers, but rather send a message to those who are willing to listen.
@@ -39,6 +45,7 @@
             
             It is important that sometimes changing someone’s mindset is more valuable than any famed artwork.</p>
     </section>
+</div>
   </body>
 <footer>
   <p>Jacob Kos 2033</p>

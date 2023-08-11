@@ -13,6 +13,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  transition: background-color 0.5s ease;
 }
 
 header {
@@ -191,7 +192,7 @@ nav.show {
   left: 50%;
   width: 90%;
   transform: translate(-50%, -50%);
-  text-align: justify;
+  text-align: left;
   flex: 1;
 }
 
@@ -200,6 +201,7 @@ nav.show {
 }
 
 .aboutcontent p {
+  text-align: justify;
   font-size: max(8px, 1vw, 12px);
 }
 
