@@ -116,7 +116,7 @@ nav ul {
 
 nav ul li {
   list-style: none;
-  font-size: min(30vh, 14px);
+  font-size: clamp(12px, 2vw, 30px);
   color: #fff;
   line-height: 2.2;
   text-transform: uppercase;
@@ -183,6 +183,24 @@ nav.show {
   font-size: max(12px, 2vw, 20px);
   animation: shotup 600ms ease-in-out;
   animation-delay: 600ms;
+}
+
+.aboutcontent {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  width: 90%;
+  transform: translate(-50%, -50%);
+  text-align: justify;
+  flex: 1;
+}
+
+.aboutcontent h2 {
+  font-size: max(20px, 4vw, 50px);
+}
+
+.aboutcontent p {
+  font-size: max(8px, 1vw, 12px);
 }
 
 footer {
